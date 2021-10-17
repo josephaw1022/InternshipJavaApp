@@ -14,7 +14,7 @@ public abstract class User {
     //TODO
     return true;
   }
-  protected boolean changePassword() {
+  protected boolean changePassword(String newPassword) { //may need to move this method
     //TODO
     return true;
   }
