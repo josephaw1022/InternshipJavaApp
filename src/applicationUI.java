@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class applicationUI {
+public class ApplicationUI {
     private Scanner scanner;
     private ApplicationManager application;
 
