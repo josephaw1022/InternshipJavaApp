@@ -2,11 +2,11 @@
 
 <h2> Python & Chill </h2>
 
-   - Joe
-   - Jackson
-   - Zhandair
-   - Jordan 
-   - Brian 
+   - Joe Whiteaker
+   - Jackson Trigiani 
+   - Ethan Watkins
+   - Jordan Hennings
+   - Brian Bongermino  
   
  <h2> Description (CLI appplication) </h2>
 This program is designed to allow students at the University of South Carolina to easily search for and find jobs related to their major. The program is written in java and outputs to a terminal.
