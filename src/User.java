@@ -1,3 +1,4 @@
+package src;
 public abstract class User {
   protected String id;
   protected String firstName;
@@ -7,6 +8,9 @@ public abstract class User {
   protected String email;
   protected int phone;
   
+  public User() {
+
+  }
   public User(String id, String firstName, String lastName, String username, String password, String email, int phone) {
 
   }

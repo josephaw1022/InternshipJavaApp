@@ -10,23 +10,25 @@ import java.util.ArrayList;
      private ArrayList<String> prefferedQuals;
      private ArrayList<String> requiredQuals;
      private boolean isOpen;
-     private double raiting;
+     private double rating;
+     
+     public JobListing() {
 
-     public JobListing(String id, String companyName, String jobDescription, ArrayList<String> requriedQuals, ArrayList<String> prefferedQuals, isOpen boolean){
+     }
+     public JobListing(String id, String companyName, String jobDescription, ArrayList<String> requiredQuals, ArrayList<String> prefferedQuals) {
 
      }
 
      public JobListing getJob(String id){
          //TODO
 	JobListing listing;
-	return listing;
+	return new JobListing();
 
      }
 
      public double getRaiting(){
          //TODO
-	double rating;
-	return rating;
+	return 0.0;
      }
      public void sendInterestMEssage(String studentID){
        

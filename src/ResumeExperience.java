@@ -14,10 +14,10 @@ import java.util.ArrayList;
      }
 
      public ArrayList<String> addExperienceDetail(String detailDescription){
-
+       return new ArrayList<>();
      }
 
      public boolean removeExperienceDetail(String detailDescription){
-
+       return true;
      }
  }
