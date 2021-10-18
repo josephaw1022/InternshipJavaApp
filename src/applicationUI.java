@@ -13,5 +13,10 @@ public class ApplicationUI {
     private void displayMainMenu(){
         
     }
+    public static void main(String[] args) {
+		ApplicationUI ui = new ApplicationUI();
+		ui.run();
+	}
+
     
 }
