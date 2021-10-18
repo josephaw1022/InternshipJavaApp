@@ -1,16 +1,15 @@
 package src;
 
-public class Reviews {
+public class Review {
 	private User writer;
 	private String comment;
 	private double rating;
    
-	public Reviews(User writer, String comment, double score){
+	public Review(User writer, String comment, double score){
    
 	}
    
 	public User getWriter(){
-   
 	}
    
 	public String getComment(){
