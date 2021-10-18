@@ -1,5 +1,3 @@
-package src;
-
 import java.util.ArrayList;
 
 
@@ -24,11 +22,7 @@ public class EndpointJob{
      * @return Job[]
      */
     public JobListing[] readList() {
-<<<<<<< HEAD
-      return new JobListing[2];
-=======
       return new JobListing[2];  
->>>>>>> 85b38b4a26574b23508ad06bcc8362c582f31b6f
     }
 
     public void update(){ 
