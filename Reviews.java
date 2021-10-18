@@ -18,6 +18,4 @@ public class Reviews {
     public double getRating(){
 
     }
-
-
 }
