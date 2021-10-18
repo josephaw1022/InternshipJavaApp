@@ -2,7 +2,7 @@ package src;
 
 import java.util.ArrayList;
 
- public class jobListing {
+ public class JobListing {
      private String id;
      private String jobTitle;
      private String companyName;
@@ -12,18 +12,23 @@ import java.util.ArrayList;
      private boolean isOpen;
      private double raiting;
 
-     public jobListing(String id, String companyName, String jobDescription, ArrayList<String> requriedQuals, ArrayList<String> prefferedQuals, isOpen boolean){
+     public JobListing(String id, String companyName, String jobDescription, ArrayList<String> requriedQuals, ArrayList<String> prefferedQuals, isOpen boolean){
 
      }
 
-     public jobListing getJob(String id){
+     public JobListing getJob(String id){
          //TODO
+	JobListing listing;
+	return listing;
+
      }
 
      public double getRaiting(){
          //TODO
+	double rating;
+	return rating;
      }
      public void sendInterestMEssage(String studentID){
-
+       
      }
  }
