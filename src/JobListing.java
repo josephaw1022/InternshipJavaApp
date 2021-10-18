@@ -1,3 +1,4 @@
+package src;
 
 import java.util.ArrayList;
 
@@ -20,7 +21,6 @@ import java.util.ArrayList;
 
      public JobListing getJob(String id){
          //TODO
-	JobListing listing;
 	return new JobListing();
 
      }
