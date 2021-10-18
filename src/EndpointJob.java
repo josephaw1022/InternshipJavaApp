@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class EndpointJob{ 
     
-    private ArrayList<Job> list ; 
+    private ArrayList<JobListing> list ; 
 
     public void create(){
 
@@ -14,16 +14,16 @@ public class EndpointJob{
     /** 
      * @return Job
      */
-    public Job readDetail(){ 
-
+    public JobListing readDetail(){ 
+      return new JobListing();
     }
 
     
     /** 
      * @return Job[]
      */
-    public Job[] readList() {
-        
+    public JobListing[] readList() {
+      return new JobListing[2];
     }
 
     public void update(){ 

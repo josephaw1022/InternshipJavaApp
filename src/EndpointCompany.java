@@ -15,7 +15,7 @@ public class EndpointCompany {
      * @return Company
      */
     public Company readDetail(){ 
-
+      return new Company();
     }
 
     
@@ -23,7 +23,7 @@ public class EndpointCompany {
      * @return Company[]
      */
     public Company[] readList() {
-        
+      return new Company[2]; 
     }
 
     public void update(){ 

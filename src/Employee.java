@@ -7,7 +7,7 @@ public class Employee{
     }
 
     public Review addStudentReview(){
-
+      return new Review();
     }
     
 }
