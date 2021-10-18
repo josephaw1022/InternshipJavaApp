@@ -1,3 +1,5 @@
+package src;
+
 import java.util.ArrayList;
 
 public class Company {
@@ -11,7 +13,7 @@ public class Company {
   }
 
   public ArrayList<Employee> getEmployees() {
-	  
+	  return new ArrayList<>();
   }
 	
 }
