@@ -12,7 +12,7 @@ public class EndpointCompany {
 
     
     /** 
-     * @return User
+     * @return Company
      */
     public Company readDetail(){ 
 
@@ -20,7 +20,7 @@ public class EndpointCompany {
 
     
     /** 
-     * @return User[]
+     * @return Company[]
      */
     public Company[] readList() {
         
@@ -33,4 +33,5 @@ public class EndpointCompany {
     public void delete(){
 
     }
+
 }
