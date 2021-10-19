@@ -1,5 +1,3 @@
-package src;
-
 import java.util.ArrayList;
 
 
@@ -24,7 +22,7 @@ public class EndpointUser{
      * @return User[]
      */
     public User[] readList() {
-      return new Student[2];
+      return new Student[2]; 
     }
 
     public void update(){ 

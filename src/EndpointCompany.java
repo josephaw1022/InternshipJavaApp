@@ -1,5 +1,3 @@
-package src;
-
 import java.util.ArrayList; 
 
 public class EndpointCompany {
@@ -22,7 +20,7 @@ public class EndpointCompany {
      * @return Company[]
      */
     public Company[] readList() {
-      return new Company[1];
+      return new Company[2];
     }
 
     public void update(){ 

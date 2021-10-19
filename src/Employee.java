@@ -1,4 +1,3 @@
-package src;
 public class Employee{
     private String companyName;
     private String jobTitle;
