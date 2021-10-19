@@ -1,4 +1,3 @@
-
 public class Review {
 	private User writer;
 	private String comment;

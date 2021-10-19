@@ -14,7 +14,7 @@ public class EndpointUser{
      * @return User
      */
     public User readDetail(){ 
-
+      return new Student();
     }
 
     
@@ -22,7 +22,7 @@ public class EndpointUser{
      * @return User[]
      */
     public User[] readList() {
-        
+      return new Student[2]; 
     }
 
     public void update(){ 
