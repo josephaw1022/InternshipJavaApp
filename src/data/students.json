@@ -25,7 +25,7 @@
 	    "description": "I like starbucks"
 	  }
 	],
-	"Skills": ["Customer Service Oriented", "Leader"],
+	"skills": ["Customer Service Oriented", "Leader"],
 	"currentClasses": [
 	  {
 	    "className": "Business Management 300", "classDescription": "Managing business employees"
@@ -61,7 +61,7 @@
           "description": "Amazon is cool"
         }
       ],
-      "Skills": ["Problem Solving", "Communication"],
+      "skills": ["Problem Solving", "Communication"],
       "currentClasses": [
 	{
 	  "className": "Data Structure and Algorithm", "classDescription": "we learn about data structures"
