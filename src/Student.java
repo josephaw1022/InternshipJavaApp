@@ -22,7 +22,7 @@ public class Student extends User {
     }
 
     public void addResume(Resume resume) {
-
+      resumes.add(resume);
     }
 
     public Resume createResume() {
