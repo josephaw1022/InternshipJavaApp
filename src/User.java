@@ -11,9 +11,10 @@ public abstract class User {
   protected String email;
   protected int phone;
   
-  public User() {
+  protected User() {
 
   }
+
   public User(UUID id, String firstName, String lastName, String username, String password, String email, int phone) {
     this.id = id;
     this.firstName = firstName;
@@ -22,7 +23,8 @@ public abstract class User {
     this.password = password;
     this.email = email;
     this.phone = phone;
-  }
+
+ 
 
   public boolean checkUnique(String username, String password, String email, int phone) {
     //TODO - possibly needs to be moved to UserEndpoint
