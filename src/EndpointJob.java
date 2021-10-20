@@ -3,10 +3,9 @@ import java.util.ArrayList;
 public class EndpointJob {
 
   private ArrayList<JobListing> list;
-
+  
   public void create(Job jobn ){
       this.list.add(job)
-
     }
 
   /**
@@ -37,7 +36,7 @@ public class EndpointJob {
 
   public void delete(int id){
       or (int i = 0; i < this.list.size(); i++) {
-        if (this.list[i] == job.id) {
+        if (this.list[i].id == id) {
           this.list.remove(i);
         }
       }
