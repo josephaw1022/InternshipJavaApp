@@ -28,14 +28,14 @@ public class EndpointUser {
   /**
    * @return User[]
    */
-  public User[] readList() {
-    return new Student[2];
+  public ArrayList<User> readList() {
+    return this.list;
   }
 
   public void update(User user ){ 
       for (int i = 0; i < this.list.size(); i++) {
         if (this.list.get(i).id == user.id) {
-          //this.list.get(i) =  company; 
+          user = this.list.get(i); 
         }
       }
     }
