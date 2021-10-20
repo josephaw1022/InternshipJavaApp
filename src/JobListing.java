@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 
  public class JobListing {
-     private String id;
+     public String id;
      private String jobTitle;
      private String companyName;
      private String jobDescription;

@@ -25,7 +25,6 @@ public class Student extends User {
                    int phone,
                    String major,
                    String studentID) {
-      super(id, firstName, lastName, username, password, email, phone);
       this.major = major;
       resumes = new ArrayList<Resume>();
     }

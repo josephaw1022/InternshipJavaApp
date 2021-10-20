@@ -23,6 +23,7 @@ public abstract class User {
     this.password = password;
     this.email = email;
     this.phone = phone;
+  }
 
  
 

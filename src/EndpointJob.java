@@ -4,39 +4,40 @@ public class EndpointJob {
 
   private ArrayList<JobListing> list;
   
-  public void create(Job jobn ){
-      this.list.add(job)
+  public void create(JobListing job){
+      this.list.add(job);
     }
 
   /**
    * @return Job
    */
-  public JobListing readDetail(int id) {
+  public JobListing readDetail(String id) {
     for (int i = 0; i < this.list.size(); i++) {
-      if (this.list[i] == id) {
-        return this.list[i];
+      if(this.list.get(i).id == id) {
+        return this.list.get(i);
       }
     }
+    return new JobListing();
   }
 
   /** 
      * @return Job[]
      */
-    public JobListing[] readList() {
-      return this.list 
+    public ArrayList<JobListing> readList() {
+      return this.list;
     }
 
-  public void update(Job job){ 
+  public void update(JobListing job){ 
       for (int i = 0; i < this.list.size(); i++) {
-        if (this.list[i] == job.id) {
-          this.list[i] = job 
+        if (this.list.get(i).id == job.id) {
+          job = this.list.get(i);
         }
       } 
     }
 
-  public void delete(int id){
-      or (int i = 0; i < this.list.size(); i++) {
-        if (this.list[i].id == id) {
+  public void delete(String id){
+      for (int i = 0; i < this.list.size(); i++) {
+        if (this.list.get(i).id == id) {
           this.list.remove(i);
         }
       }
