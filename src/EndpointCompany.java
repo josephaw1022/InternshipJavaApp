@@ -35,7 +35,7 @@ public class EndpointCompany {
 
   public void delete(int id) {
     for (int i = 0; i < this.list.size(); i++) {
-      if (this.list[i] == company.id) {
+      if (this.list[i].id == id) {
         this.list.remove(i);
       }
     }
