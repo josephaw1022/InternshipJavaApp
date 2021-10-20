@@ -1,8 +1,6 @@
 /**
  * @author Jordan Hennings
  */
-
- 
 import java.util.ArrayList;
 
 

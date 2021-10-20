@@ -4,22 +4,25 @@ public class Review {
 	private double rating;
         
 	public Review() {
-
+		writer = new User();
+		comment = "";
+		rating = 0.0;
 	}
 	public Review(User writer, String comment, double score){
-   
+		this.writer = writer;
+
 	}
    
 	public User getWriter(){
 
-	  return writer;
+		return writer;
 	}
    
 	public String getComment(){
-          return "str";
+        return comment;
 	}
    
 	public double getRating(){
-	  return 0.0;
+		return rating;
 	}
     }

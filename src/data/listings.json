@@ -1,0 +1,22 @@
+[
+    {
+        "userID": "001",
+        "jobTitle": "Developer",
+        "companyName": "CodeCO LTD",
+        "jobDescription": "To write code",
+        "requiredQuals": "A bachelor's degree in Computer Science",
+        "preferredQuals": "Prior professional experience",
+        "isOpen": true,
+        "rating": 4.8
+    }
+    {
+        "userID": "002",
+        "jobTitle": "Project Manager",
+        "companyName": "MicroCom",
+        "jobDescription": "Oversee future developements",
+        "requiredQuals": "A bachelor's degree in CIS",
+        "preferredQuals": "Prior professional experience, leadership experience",
+        "isOpen": false,
+        "rating": 1.0
+    }
+]
