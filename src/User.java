@@ -1,5 +1,9 @@
+
+
+import java.util.UUID;
+
 public abstract class User {
-  protected String id;
+  protected UUID id;
   protected String firstName;
   protected String lastName;
   protected String username;
@@ -10,15 +14,29 @@ public abstract class User {
   protected User() {
 
   }
-  protected User(String id, String firstName, String lastName, String username, String password, String email, int phone) {
 
-  }
+  public User(UUID id, String firstName, String lastName, String username, String password, String email, int phone) {
+    this.id = id;
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.username = username;
+    this.password = password;
+    this.email = email;
+    this.phone = phone;
+
+ 
+
   public boolean checkUnique(String username, String password, String email, int phone) {
-    //TODO
+    //TODO - possibly needs to be moved to UserEndpoint
     return true;
   }
+  
   protected boolean changePassword(String oldPassword, String newPassword) { //may need to move this method
-    //TODO
-    return true;
+    if(oldPassword == this.password) {
+      this.password = newPassword;
+      return true;
+    }
+    
+    return false;
   }
 }
