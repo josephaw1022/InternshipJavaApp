@@ -12,7 +12,7 @@ public class Review {
    
 	public User getWriter(){
 
-	  return new Student();
+	  return writer;
 	}
    
 	public String getComment(){

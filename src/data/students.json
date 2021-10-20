@@ -1,2 +1,34 @@
-[{"User ID":"001","First Name":"John","Last Name":"Doe","Username":"jdoe","Password":"password","Email":"jdaddy@yahoo.com","Phone":"999-9999","Major":"Computer Science","GPA":"2.5","Resumes":[{"Resume ID":"1"},{"Resume ID":"2"},{"Resume ID":"3"}]}
-,{"User ID":"002","First Name":"Jane","Last Name":"Dane","Username":"jdane","Password":"whatup","Email":"jdanish@gmail.com","Phone":"555-5555","Major":"Astrophysics","GPA":"4.0","Resumes":[{"Resume ID":"1"},{"Resume ID":"2"},{"Resume ID":"3"}]}]
+[
+  {
+    "User ID": "001",
+    "First Name": "John",
+    "Last Name": "Doe",
+    "Username": "jdoe",
+    "Password": "password",
+    "Email": "jdaddy@yahoo.com",
+    "Phone": "999-9999",
+    "Major": "Computer Science",
+    "GPA": "2.5",
+    "Resumes": [
+      { "Resume ID": "1" },
+      { "Resume ID": "2" },
+      { "Resume ID": "3" }
+    ]
+  },
+  {
+    "User ID": "002",
+    "First Name": "Jane",
+    "Last Name": "Dane",
+    "Username": "jdane",
+    "Password": "whatup",
+    "Email": "jdanish@gmail.com",
+    "Phone": "555-5555",
+    "Major": "Astrophysics",
+    "GPA": "4.0",
+    "Resumes": [
+      { "Resume ID": "1" },
+      { "Resume ID": "2" },
+      { "Resume ID": "3" }
+    ]
+  }
+]
