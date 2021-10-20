@@ -1,7 +1,8 @@
 import java.util.ArrayList;
+import java.util.*;
 
  public class JobListing {
-     public String id;
+     public UUID id;
      private String jobTitle;
      private String companyName;
      private String jobDescription;

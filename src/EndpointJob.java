@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.*;
 
 public class EndpointJob {
 
@@ -11,7 +12,7 @@ public class EndpointJob {
   /**
    * @return Job
    */
-  public JobListing readDetail(String id) {
+  public JobListing readDetail(UUID id) {
     for (int i = 0; i < this.list.size(); i++) {
       if(this.list.get(i).id == id) {
         return this.list.get(i);
@@ -35,7 +36,7 @@ public class EndpointJob {
       } 
     }
 
-  public void delete(String id){
+  public void delete(UUID id){
       for (int i = 0; i < this.list.size(); i++) {
         if (this.list.get(i).id == id) {
           this.list.remove(i);
