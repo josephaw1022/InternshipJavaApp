@@ -3,6 +3,7 @@
  */
 
 import java.util.ArrayList;
+import java.util.UUID;
 
 public class Student extends User {
     private String major;
@@ -13,6 +14,7 @@ public class Student extends User {
     public Student() {
       
     }
+
 
     public Student(String id,
                    String firstName,
