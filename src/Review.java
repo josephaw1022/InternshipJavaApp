@@ -4,7 +4,8 @@ public class Review {
 	private double rating;
         
 	public Review() {
-		writer = new User();
+		//writer is a new student here for compiling purposes, must be fixed to accept any User
+		writer = new Student();
 		comment = "";
 		rating = 0.0;
 	}
