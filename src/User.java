@@ -7,10 +7,10 @@ public abstract class User {
   protected String email;
   protected int phone;
   
-  public User() {
+  protected User() {
 
   }
-  public User(String id, String firstName, String lastName, String username, String password, String email, int phone) {
+  protected User(String id, String firstName, String lastName, String username, String password, String email, int phone) {
 
   }
   public boolean checkUnique(String username, String password, String email, int phone) {
