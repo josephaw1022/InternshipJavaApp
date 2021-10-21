@@ -1,48 +1,43 @@
 import java.util.ArrayList;
-import java.util.*;
 
 public class EndpointCompany {
-  private ArrayList<Employee> list;
+  private ArrayList<Company> list;
 
-  public void create(Employee company) {
+  public static void create(Company company) {
     this.list.add(company);
   }
 
   /**
-   * @return Employee
+   * @return Company
    */
-  public Employee readDetail(UUID id) {
+  public static Company readDetail(String id) {
     for (int i = 0; i < this.list.size(); i++) {
       if (this.list.get(i).id == id) {
-        return this.list.get(i);
+        return this.list.get(i)
       }
     }
-    return new Employee();
-    
   }
 
   /**
    * @return Company[]
    */
-  public ArrayList<Employee> readList() {
+  public Company[] readList() {
     return this.list;
   }
 
-  public void update(Employee employee) {
+  public static boolean update(Company company) {
     for (int i = 0; i < this.list.size(); i++) {
-      if (this.list.get(i).id == employee.id) {
-        employee = this.list.get(i); 
+      if (this.list.get(i).id == company.id) {
+        this.list.set(i, company)
       }
     }
   }
 
-  public void delete(UUID id) {
+  public static boolean delete(String id) {
     for (int i = 0; i < this.list.size(); i++) {
       if (this.list.get(i).id == id) {
         this.list.remove(i);
       }
     }
-
   }
-
 }
