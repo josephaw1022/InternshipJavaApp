@@ -26,7 +26,7 @@ public class EndpointJob {
       return this.list 
     }
 
-  public static void update(Job job){ 
+  public static boolean update(Job job){ 
       for (int i = 0; i < this.list.size(); i++) {
         if (this.list[i].id == job.id) {
           this.list[i] = job 
@@ -34,7 +34,7 @@ public class EndpointJob {
       } 
     }
 
-  public static void delete(int id) {
+  public static boolean delete(int id) {
     for (int i = 0; i < this.list.size(); i++) {
       if (this.list[i].id == id) {
         this.list.remove(i);

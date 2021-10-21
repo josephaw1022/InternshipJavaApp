@@ -26,7 +26,7 @@ public class EndpointUser {
     return this.list;
   }
 
-  public static void update(User user ){ 
+  public static boolean update(User user ){ 
       for (int i = 0; i < this.list.size(); i++) {
         if (this.list[i].id == user.id) {
           this.list[i] =  company  
@@ -34,10 +34,11 @@ public class EndpointUser {
       }
     }
 
-  public static void delete(String id) {
+  public static boolean delete(String id) {
     for (int i = 0; i < this.list.size(); i++) {
       if (this.list[i].id == id) {
         this.list.remove(i);
+        return 1 
       }
     }
   }
