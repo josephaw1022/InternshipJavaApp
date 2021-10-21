@@ -4,17 +4,17 @@ public class EndpointUser {
 
   private ArrayList<User> list;
 
-  public void create(User user){
+  public static void create(User user){
       this.list.add(user)
     }
 
   /**
    * @return User
    */
-  public User readDetail(int id) {
+  public static User readDetail(String id) {
     for (int i = 0; i < this.list.size(); i++) {
-      if (this.list[i] == id) {
-        return this.list[i];
+      if (this.list[i].id == id) {
+        return this.list[i]
       }
     }
   }
@@ -22,21 +22,21 @@ public class EndpointUser {
   /**
    * @return User[]
    */
-  public User[] readList() {
+  public static User[] readList() {
     return this.list;
   }
 
-  public void update(User user ){ 
+  public static void update(User user ){ 
       for (int i = 0; i < this.list.size(); i++) {
-        if (this.list[i] == user.id) {
+        if (this.list[i].id == user.id) {
           this.list[i] =  company  
         }
       }
     }
 
-  public void delete(int id ) {
+  public static void delete(String id) {
     for (int i = 0; i < this.list.size(); i++) {
-      if (this.list[i].id ==id) {
+      if (this.list[i].id == id) {
         this.list.remove(i);
       }
     }

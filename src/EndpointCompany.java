@@ -3,17 +3,17 @@ import java.util.ArrayList;
 public class EndpointCompany {
   private ArrayList<Company> list;
 
-  public void create(Company company) {
+  public static void create(Company company) {
     this.list.add(company);
   }
 
   /**
    * @return Company
    */
-  public Company readDetail(int id) {
+  public static Company readDetail(String id) {
     for (int i = 0; i < this.list.size(); i++) {
-      if (this.list[i] == id) {
-        return this.list[i];
+      if (this.list[i].id == id) {
+        return this.list[i]
       }
     }
   }
@@ -25,21 +25,19 @@ public class EndpointCompany {
     return this.list;
   }
 
-  public void update(Company company) {
+  public static void update(Company company) {
     for (int i = 0; i < this.list.size(); i++) {
-      if (this.list[i] == company.id) {
+      if (this.list[i].id == company.id) {
         this.list[i] =  company  
       }
     }
   }
 
-  public void delete(int id) {
+  public static void delete(String id) {
     for (int i = 0; i < this.list.size(); i++) {
       if (this.list[i].id == id) {
         this.list.remove(i);
       }
     }
-
   }
-
 }
