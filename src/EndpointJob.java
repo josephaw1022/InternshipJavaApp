@@ -3,18 +3,19 @@ import java.util.ArrayList;
 public class EndpointJob {
 
   private ArrayList<JobListing> list;
-  
-  public void create(Job jobn ){
+
+  public static void create(JobListing job){
       this.list.add(job)
     }
 
   /**
    * @return Job
    */
-  public JobListing readDetail(int id) {
+  public static JobListing readDetail(int id) {
+
     for (int i = 0; i < this.list.size(); i++) {
-      if (this.list[i] == id) {
-        return this.list[i];
+      if (this.list.get(i).id == id) {
+        return this.list.get(i)
       }
     }
   }
@@ -22,24 +23,28 @@ public class EndpointJob {
   /** 
      * @return Job[]
      */
-    public JobListing[] readList() {
+    public static JobListing[] readList() {
       return this.list 
     }
 
-  public void update(Job job){ 
+  public static boolean update(JobListing job){ 
       for (int i = 0; i < this.list.size(); i++) {
-        if (this.list[i] == job.id) {
-          this.list[i] = job 
+        if (this.list.get(i).id == job.id) {
+          this.list.set(i,job)
+          return true 
         }
       } 
+      return false 
     }
 
-  public void delete(int id){
-      or (int i = 0; i < this.list.size(); i++) {
-        if (this.list[i].id == id) {
-          this.list.remove(i);
-        }
+  public static boolean delete(int id) {
+    for (int i = 0; i < this.list.size(); i++) {
+      if (this.list.get(i).id == id) {
+        this.list.remove(i);
+        return true 
       }
     }
+    return false 
+  }
 
 }
