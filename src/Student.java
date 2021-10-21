@@ -15,16 +15,14 @@ public class Student extends User {
       
     }
 
-
-    public Student(String id,
+    public Student(UUID id,
                    String firstName,
                    String lastName,
                    String username,
                    String password,
                    String email,
                    int phone,
-                   String major,
-                   String studentID) {
+                   String major) {
       this.major = major;
       resumes = new ArrayList<Resume>();
     }
