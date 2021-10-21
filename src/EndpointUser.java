@@ -13,8 +13,8 @@ public class EndpointUser {
    */
   public static User readDetail(String id) {
     for (int i = 0; i < this.list.size(); i++) {
-      if (this.list[i].id == id) {
-        return this.list[i]
+      if (this.list.get(i).id == id) {
+        return this.list.get(i)
       }
     }
   }
@@ -28,19 +28,22 @@ public class EndpointUser {
 
   public static boolean update(User user ){ 
       for (int i = 0; i < this.list.size(); i++) {
-        if (this.list[i].id == user.id) {
-          this.list[i] =  company  
+        if (this.list.get(i).id == user.id) {
+          this.list.set(i, company) 
+          return true 
         }
       }
+      return false 
     }
 
   public static boolean delete(String id) {
     for (int i = 0; i < this.list.size(); i++) {
-      if (this.list[i].id == id) {
+      if (this.list.get(i).id == id) {
         this.list.remove(i);
-        return 1 
+        return true 
       }
     }
+    return false 
   }
 
 }

@@ -12,8 +12,8 @@ public class EndpointCompany {
    */
   public static Company readDetail(String id) {
     for (int i = 0; i < this.list.size(); i++) {
-      if (this.list[i].id == id) {
-        return this.list[i]
+      if (this.list.get(i).id == id) {
+        return this.list.get(i)
       }
     }
   }
@@ -27,15 +27,15 @@ public class EndpointCompany {
 
   public static boolean update(Company company) {
     for (int i = 0; i < this.list.size(); i++) {
-      if (this.list[i].id == company.id) {
-        this.list[i] =  company  
+      if (this.list.get(i).id == company.id) {
+        this.list.set(i, company)
       }
     }
   }
 
   public static boolean delete(String id) {
     for (int i = 0; i < this.list.size(); i++) {
-      if (this.list[i].id == id) {
+      if (this.list.get(i).id == id) {
         this.list.remove(i);
       }
     }
