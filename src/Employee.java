@@ -1,9 +1,13 @@
 import java.util.ArrayList;
 
-public class Employee{
+public class Employee extends User {
     private String companyName;
     private String jobTitle;
     private ArrayList<Review> reviews;
+
+    public Employee() {
+      
+    }
 
     public Employee(String companyName, String jobTitle){
       this.companyName = companyName;
