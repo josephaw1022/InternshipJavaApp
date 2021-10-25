@@ -8,6 +8,35 @@ import org.json.simple.parser.JSONParser;
 
 public class DataLoader extends DataConstants {
 
+	public static ArrayList<Employee> loadEmployees() {
+		ArrayList<Employee> employees = new ArrayList<>();
+	    
+		try {
+		  FileReader reader = new FileReader(ADMIN_FILE_NAME);
+		  JSONParser parser = new JSONParser();	
+		  JSONArray employeesJSON = (JSONArray)parser.parse(reader);
+		    
+		  for(int i=0; i < employeesJSON.size(); i++) {
+		    JSONObject employeeJSON = (JSONObject)employeesJSON.get(i);
+		    String id = (String)employeeJSON.get(USER_ID);
+		    String userName = (String)employeeJSON.get(USER_USER_NAME);
+		    String password = (String)employeeJSON.get(USER_PASSWORD);
+		    String firstName = (String)employeeJSON.get(USER_FIRST_NAME);
+		    String lastName = (String)employeeJSON.get(USER_LAST_NAME);
+		    String email = (String)employeeJSON.get(USER_EMAIL);
+		    String phoneNumber = (String)employeeJSON.get(USER_PHONE_NUMBER);	
+		    String companyName = (String)employeeJSON.get(USER_PHONE_NUMBER);	
+		    String jobTitle = (String)employeeJSON.get(USER_PHONE_NUMBER);	
+		    employees.add(new Employee(id, firstName, lastName, userName, password, email, phoneNumber, companyName, jobTitle));
+		    }
+		    
+		    return employees;
+		    
+		    } catch (Exception e) {
+		    e.printStackTrace();
+		     }
+		return null;
+		}
 	public static ArrayList<Admin> loadAdmins() {
 		ArrayList<Admin> admins = new ArrayList<>();
 	    

@@ -4,7 +4,7 @@ import java.util.UUID;
 public class EmployeeList {
   private static EmployeeList employees = null;
 
-  private static ArrayList<Admin> employeesList = new ArrayList<>();
+  private static ArrayList<Employee> employeesList = new ArrayList<>();
 
   private EmployeeList() {
     employeesList = DataLoader.loadEmployees();
