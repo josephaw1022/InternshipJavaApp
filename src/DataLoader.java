@@ -8,12 +8,12 @@ import org.json.simple.parser.JSONParser;
 
 public class DataLoader extends DataConstants {
   
-  public static ArrayList<Student> getStudents() {
+  public static ArrayList<Student> loadStudents() {
     ArrayList<Student> students = new ArrayList<>();
     try {
       FileReader reader = new FileReader(USER_FILE_NAME);
       JSONParser parser = new JSONParser();	
-      JSONArray studentsJSON = (JSONArray)new JSONParser().parse(reader);
+      JSONArray studentsJSON = (JSONArray)parser.parse(reader);
 	
       for(int i=0; i < studentsJSON.size(); i++) {
         JSONObject studentJSON = (JSONObject)studentsJSON.get(i);
@@ -34,5 +34,9 @@ public class DataLoader extends DataConstants {
 	e.printStackTrace();
  	}
     return null;
+    }
+    public static void main(String args[]) {
+      
+      
     }
 }
