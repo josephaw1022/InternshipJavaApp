@@ -12,7 +12,7 @@ public class DataWriter extends DataConstants {
 		JSONArray adminsJSON = new JSONArray();
 		
 		//creating all the json objects
-		for(int i=0; i< adminsJSON.size(); i++) {
+		for(int i=0; i< admins.size(); i++) {
 			adminsJSON.add(getAdminJSON(admins.get(i)));
 		}
 		
@@ -32,9 +32,9 @@ public class DataWriter extends DataConstants {
 		adminDetails.put(USER_ID, admin.getID());
 		adminDetails.put(USER_FIRST_NAME, admin.getFirstName());
 		adminDetails.put(USER_LAST_NAME, admin.getLastName());
-		adminDetails.put(USER_USER_NAME, admin.getLastName());
-		adminDetails.put(USER_PASSWORD, admin.getLastName());	
-		adminDetails.put(USER_EMAIL, admin.getLastName());	
+		adminDetails.put(USER_USER_NAME, admin.getUserName());
+		adminDetails.put(USER_PASSWORD, admin.getPassword());	
+		adminDetails.put(USER_EMAIL, admin.getEmail());	
 		adminDetails.put(USER_PHONE_NUMBER, admin.getPhoneNumber());
         
         return adminDetails;
@@ -46,7 +46,7 @@ public class DataWriter extends DataConstants {
 		JSONArray studentsJSON = new JSONArray();
 		
 		//creating all the json objects
-		for(int i=0; i< studentsJSON.size(); i++) {
+		for(int i=0; i< students.size(); i++) {
 			studentsJSON.add(getStudentJSON(students.get(i)));
 		}
 		
