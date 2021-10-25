@@ -22,6 +22,9 @@ public abstract class User {
     this.email = email;
     this.phone = phone;
   }
+  public String getID() {
+    return this.id.toString();
+  }
   public String getFirstName() {
     return this.firstName;
   }

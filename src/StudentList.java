@@ -26,7 +26,7 @@ public void addStudent(String firstName, String lastName, String userName, Strin
 }
 
 public void logout(){
-	DataWriter.savePeople();
+	DataWriter.saveStudents();
 }
 }
 	

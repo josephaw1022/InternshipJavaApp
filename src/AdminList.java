@@ -17,15 +17,15 @@ public class AdminList {
 	return admins;
 }
 
-public ArrayList<Admin> getStudentList() {
+public ArrayList<Admin> getAdminList() {
 	return adminsList;
 }
 
-public void addStudent(String id, String firstName, String lastName, String userName, String password, String email, String phoneNumber, String major) {
+public void addAdmin(String id, String firstName, String lastName, String userName, String password, String email, String phoneNumber) {
 	adminsList.add(new Admin(id, firstName, lastName, userName, password, email, phoneNumber));
 }
 
 public void logout(){
-	DataWriter.savePeople();
+	DataWriter.saveAdmins();
 }
 }

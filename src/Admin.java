@@ -1,6 +1,6 @@
 
 
-public class Admin {
+public class Admin extends User {
     public Admin(String id, String firstName, String lastName, String username, String password, String email, String phone) {
       
     }
