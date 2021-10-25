@@ -14,6 +14,7 @@ public abstract class User {
   public User() {
 
   }
+
   public User(UUID id, String firstName, String lastName, String username, String password, String email, int phone) {
     this.id = id;
     this.firstName = firstName;
@@ -23,6 +24,8 @@ public abstract class User {
     this.email = email;
     this.phone = phone;
   }
+
+ 
 
   public boolean checkUnique(String username, String password, String email, int phone) {
     //TODO - possibly needs to be moved to UserEndpoint
@@ -36,5 +39,29 @@ public abstract class User {
     }
     
     return false;
+  }
+
+  public getID() {
+    return id;
+  }
+
+  public getFirstName() {
+    return firstName;
+  }
+
+  public getLastName() {
+    return lastName;
+  }
+
+  public getUsername() {
+    return username;
+  }
+
+  public getEmail() {
+    return email;
+  }
+
+  public getPhone() {
+    return phone;
   }
 }
