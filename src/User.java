@@ -59,4 +59,28 @@ public abstract class User {
     
     return false;
   }
+
+  public UUID getID() {
+    return id;
+  }
+
+  public String getFirstName() {
+    return firstName;
+  }
+
+  public String getLastName() {
+    return lastName;
+  }
+
+  public String getUsername() {
+    return username;
+  }
+
+  public String getEmail() {
+    return email;
+  }
+
+  public int getPhone() {
+    return phone;
+  }
 }

@@ -1,6 +1,10 @@
 import java.util.UUID;
 
+<<<<<<< HEAD
 public class Admin extends User { 
+=======
+public class Admin extends User {
+>>>>>>> 8ca29cc613ed929d18c747f816dbfabd1d00d9b9
     Admin(UUID id,String firstName,String lastName,String username, String password, String email, int phone){
       super(id,firstName,lastName,username, password, email, phone);
     }
