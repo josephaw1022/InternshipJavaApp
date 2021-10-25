@@ -22,6 +22,24 @@ public abstract class User {
     this.email = email;
     this.phone = phone;
   }
+  public String getFirstName() {
+    return this.firstName;
+  }
+  public String getLastName() {
+    return this.lastName;
+  }
+  public String getUserName() {
+    return this.username;
+  }
+  public String getPassword() {
+    return this.password;
+  }
+  public String getEmail() {
+    return this.email;
+  }
+  public int getPhoneNumber() {
+    return this.phone;
+  }
 
  
 
