@@ -40,4 +40,28 @@ public abstract class User {
     
     return false;
   }
+
+  public getID() {
+    return id;
+  }
+
+  public getFirstName() {
+    return firstName;
+  }
+
+  public getLastName() {
+    return lastName;
+  }
+
+  public getUsername() {
+    return username;
+  }
+
+  public getEmail() {
+    return email;
+  }
+
+  public getPhone() {
+    return phone;
+  }
 }
