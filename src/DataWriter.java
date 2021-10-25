@@ -8,12 +8,12 @@ public class DataWriter extends DataConstants {
 	
 	public static void saveAdmins() {
 		AdminList adminList = AdminList.getInstance();
-		ArrayList<Admin> students = adminList.getAdminList();
+		ArrayList<Admin> admins = adminList.getAdminList();
 		JSONArray adminsJSON = new JSONArray();
 		
 		//creating all the json objects
 		for(int i=0; i< adminsJSON.size(); i++) {
-			adminsJSON.add(getAdminJSON(students.get(i)));
+			adminsJSON.add(getAdminJSON(admins.get(i)));
 		}
 		
 		//Write JSON file

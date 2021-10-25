@@ -1,19 +1,19 @@
 import java.util.UUID;
 
 public abstract class User {
-  protected UUID id;
+  protected String id;
   protected String firstName;
   protected String lastName;
   protected String username;
   protected String password;
   protected String email;
-  protected int phone;
+  protected String phone;
   
   protected User() {
 
   }
 
-  public User(UUID id, String firstName, String lastName, String username, String password, String email, int phone) {
+  public User(String id, String firstName, String lastName, String username, String password, String email, String phone) {
     this.id = id;
     this.firstName = firstName;
     this.lastName = lastName;
@@ -23,7 +23,7 @@ public abstract class User {
     this.phone = phone;
   }
   public String getID() {
-    return this.id.toString();
+    return this.id;
   }
   public String getFirstName() {
     return this.firstName;
@@ -40,7 +40,7 @@ public abstract class User {
   public String getEmail() {
     return this.email;
   }
-  public int getPhoneNumber() {
+  public String getPhoneNumber() {
     return this.phone;
   }
 

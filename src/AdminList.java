@@ -13,7 +13,6 @@ public class AdminList {
 	if(admins == null) {
 		admins = new AdminList();
 	}
-	
 	return admins;
 }
 

@@ -68,6 +68,7 @@ public class DataLoader extends DataConstants {
       String id = UUID.randomUUID().toString();
       String studentPhone = "8881234567";
       adminList.addAdmin(id, "jackson", "trigiani", "jacktrig", "password", "jacktrig@gmail.com", studentPhone); 
+      adminList.logout();
 
       StudentList studentList = StudentList.getInstance();
       UUID studentID = UUID.randomUUID();
