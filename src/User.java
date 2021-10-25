@@ -11,7 +11,7 @@ public abstract class User {
   protected String email;
   protected int phone;
   
-  public User() {
+  protected User() {
 
   }
 

@@ -22,9 +22,7 @@ public class Student extends User {
                    String password,
                    String email,
                    int phone,
-                   String major,
-                   String studentID) {
-      super(id, firstName, lastName, username, password, email, phone);
+                   String major) {
       this.major = major;
       resumes = new ArrayList<Resume>();
     }
