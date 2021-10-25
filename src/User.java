@@ -41,27 +41,27 @@ public abstract class User {
     return false;
   }
 
-  public getID() {
+  public UUID getID() {
     return id;
   }
 
-  public getFirstName() {
+  public String getFirstName() {
     return firstName;
   }
 
-  public getLastName() {
+  public String getLastName() {
     return lastName;
   }
 
-  public getUsername() {
+  public String getUsername() {
     return username;
   }
 
-  public getEmail() {
+  public String getEmail() {
     return email;
   }
 
-  public getPhone() {
+  public int getPhone() {
     return phone;
   }
 }
