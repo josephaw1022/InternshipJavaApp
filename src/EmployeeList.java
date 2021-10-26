@@ -20,8 +20,8 @@ public ArrayList<Employee> getEmployeeList() {
 	return employeesList;
 }
 
-public void addEmployee(String id, String firstName, String lastName, String userName, String password, String email, String phoneNumber) {
-	employeesList.add(new Admin(id, firstName, lastName, userName, password, email, phoneNumber));
+public void addEmployee(String id, String firstName, String lastName, String userName, String password, String email, String phoneNumber, String companyName, String jobTitle) {
+	employeesList.add(new Employee(id, firstName, lastName, userName, password, email, phoneNumber, companyName, jobTitle));
 }
 
 public void logout(){
