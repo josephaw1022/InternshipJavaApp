@@ -23,8 +23,7 @@ public class Student extends User {
                    String email,
                    String phone
                   ) {
-      super(id, firstName, lastName, username, password, email, phone);
-      this.educations = new ArrayList<>();           
+      super(id, firstName, lastName, username, password, email, phone);         
       this.resumes = new ArrayList<>();
       this.reviews = new ArrayList<>();
     }
@@ -35,9 +34,6 @@ public class Student extends User {
 
     public void addResume(Resume resume) {
       this.resumes.add(resume);
-    }
-    public void addResumeExperience(ResumeExperience experience) {
-      this.experiences.add(experience);
     }
 
     public Resume createResume(String id, ArrayList<ResumeExperience> workExp, ArrayList<String> skills, ArrayList<String> currentClasses) {

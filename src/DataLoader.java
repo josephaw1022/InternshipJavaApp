@@ -118,11 +118,8 @@ public class DataLoader extends DataConstants {
 	  String className = (String)classesArray.get(j);
 	  studentResume.addClass(className);
 	}
-	
-	
 	students.get(i).addResume(studentResume);
       }
-	
 	return students;
 	 
 	} catch (Exception e) {
@@ -138,8 +135,8 @@ public class DataLoader extends DataConstants {
       adminList.logout();
 
       StudentList studentList = StudentList.getInstance();
-      UUID studentID = UUID.randomUUID();
-      studentList.addStudent(id, "jackson", "trigiani", "jacktrig", "password", "jacktrig@gmail.com", studentPhone); 
+      String studentID = UUID.randomUUID().toString();
+      studentList.addStudent(studentID, "jackson", "trigiani", "jacktrig", "password", "jacktrig@gmail.com", studentPhone); 
       
     }
 }
