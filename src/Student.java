@@ -6,8 +6,7 @@ import java.util.ArrayList;
 import java.util.UUID;
 
 public class Student extends User {
-    private String major;
-    private double GPA;
+    private ArrayList<Education> educations;
     private ArrayList<Resume> resumes;
     private ArrayList<Review> reviews;
     
@@ -15,7 +14,7 @@ public class Student extends User {
       
     }
 
-    public Student(
+    public Student(String id,
                    String firstName,
                    String lastName,
                    String username,
@@ -23,15 +22,18 @@ public class Student extends User {
                    String email,
                    String phone
                   ) {
-      resumes = new ArrayList<Resume>();
+      super(id, firstName, lastName, username, password, email, phone);
+      educations = new ArrayList<>();           
+      resumes = new ArrayList<>();
+      reviews = new ArrayList<>();
     }
 
-    public String getMajor() {
-      return major;
+    public void addEducation(Education education) {
+      this.educations.add(education);
     }
 
     public void addResume(Resume resume) {
-      resumes.add(resume);
+      this.resumes.add(resume);
     }
 
     public Resume createResume(String id, ArrayList<ResumeExperience> workExp, ArrayList<String> skills, ArrayList<String> currentClasses) {

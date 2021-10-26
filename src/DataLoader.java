@@ -76,6 +76,7 @@ public class DataLoader extends DataConstants {
       for(int i=0; i < studentsJSON.size(); i++) {
 	//parsing basic user info
         JSONObject studentJSON = (JSONObject)studentsJSON.get(i);
+	String id = (String)studentJSON.get(USER_ID);
 	String userName = (String)studentJSON.get(USER_USER_NAME);
 	String password = (String)studentJSON.get(USER_PASSWORD);
 	String firstName = (String)studentJSON.get(USER_FIRST_NAME);
@@ -94,11 +95,11 @@ public class DataLoader extends DataConstants {
 	}
 
 
-	students.add(new Student(firstName, lastName, userName, password, email, phoneNumber));
+	students.add(new Student(id, firstName, lastName, userName, password, email, phoneNumber));
 	}
 	
 	return students;
-	
+	 
 	} catch (Exception e) {
 	e.printStackTrace();
  	}
