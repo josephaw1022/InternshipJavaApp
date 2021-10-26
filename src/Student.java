@@ -21,9 +21,8 @@ public class Student extends User {
                    String username,
                    String password,
                    String email,
-                   String phone,
-                   String major) {
-      this.major = major;
+                   String phone
+                  ) {
       resumes = new ArrayList<Resume>();
     }
 

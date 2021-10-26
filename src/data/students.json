@@ -63,12 +63,16 @@
       {
         "companyName": "Google",
         "location": "Seattle, WA",
-        "description": "Google is cool"
+        "positionTitle": "software engineer",
+        "description": "Google is cool",
+        "datesOfExp": "10/20/19 - 10/30/20"
       },
       {
         "companyName": "Amazon",
         "location": "Seattle, WA",
-        "description": "Amazon is cool"
+        "description": "Amazon is cool", 
+        "positionTitle": "software engineer",
+        "datesOfExp": "10/20/19 - 10/30/20"
       }
     ],
     "skills": ["Problem Solving", "Communication"],

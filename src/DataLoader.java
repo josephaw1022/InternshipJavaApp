@@ -12,7 +12,7 @@ public class DataLoader extends DataConstants {
 		ArrayList<Employee> employees = new ArrayList<>();
 	    
 		try {
-		  FileReader reader = new FileReader(ADMIN_FILE_NAME);
+		  FileReader reader = new FileReader(EMPLOYEE_FILE_NAME);
 		  JSONParser parser = new JSONParser();	
 		  JSONArray employeesJSON = (JSONArray)parser.parse(reader);
 		    
@@ -25,8 +25,8 @@ public class DataLoader extends DataConstants {
 		    String lastName = (String)employeeJSON.get(USER_LAST_NAME);
 		    String email = (String)employeeJSON.get(USER_EMAIL);
 		    String phoneNumber = (String)employeeJSON.get(USER_PHONE_NUMBER);	
-		    String companyName = (String)employeeJSON.get(USER_PHONE_NUMBER);	
-		    String jobTitle = (String)employeeJSON.get(USER_PHONE_NUMBER);	
+		    String companyName = (String)employeeJSON.get(EMPLOYEE_COMPANY_NAME);	
+		    String jobTitle = (String)employeeJSON.get(EMPLOYEE_JOB_TITLE);	
 		    employees.add(new Employee(id, firstName, lastName, userName, password, email, phoneNumber, companyName, jobTitle));
 		    }
 		    
@@ -69,20 +69,32 @@ public class DataLoader extends DataConstants {
     ArrayList<Student> students = new ArrayList<>();
 
     try {
-      FileReader reader = new FileReader(USER_FILE_NAME);
+      FileReader reader = new FileReader(STUDENT_FILE_NAME);
       JSONParser parser = new JSONParser();	
       JSONArray studentsJSON = (JSONArray)parser.parse(reader);
 	
       for(int i=0; i < studentsJSON.size(); i++) {
+	//parsing basic user info
         JSONObject studentJSON = (JSONObject)studentsJSON.get(i);
 	String userName = (String)studentJSON.get(USER_USER_NAME);
 	String password = (String)studentJSON.get(USER_PASSWORD);
 	String firstName = (String)studentJSON.get(USER_FIRST_NAME);
 	String lastName = (String)studentJSON.get(USER_LAST_NAME);
 	String email = (String)studentJSON.get(USER_EMAIL);
-	String phoneNumber = (String)studentJSON.get(USER_PHONE_NUMBER);	
-	String major = (String)studentJSON.get(USER_MAJOR);
-	students.add(new Student(firstName, lastName, userName, password, email, phoneNumber, major));
+	String phoneNumber = (String)studentJSON.get(USER_PHONE_NUMBER);
+        //parsing education object
+	JSONArray educationArray = (JSONArray)studentJSON.get(STUDENT_EDUCATION);
+	for(int j=0; i < educationArray.size(); j++) {
+	  JSONObject studentEducation = (JSONObject)educationArray.get(i);
+	  String schoolName = (String)studentEducation.get(STUDENT_SCHOOL_NAME);
+	  String degree = (String)studentEducation.get(STUDENT_DEGREE);
+	  String major = (String)studentEducation.get(STUDENT_MAJOR);
+	  double gpa = (double)studentEducation.get(STUDENT_GPA);
+	  Education educationObject = new Education(schoolName, degree, major, gpa);
+	}
+
+
+	students.add(new Student(firstName, lastName, userName, password, email, phoneNumber));
 	}
 	
 	return students;
@@ -101,7 +113,7 @@ public class DataLoader extends DataConstants {
 
       StudentList studentList = StudentList.getInstance();
       UUID studentID = UUID.randomUUID();
-      studentList.addStudent( "jackson", "trigiani", "jacktrig", "password", "jacktrig@gmail.com", studentPhone , "comp sci"); 
+      studentList.addStudent( "jackson", "trigiani", "jacktrig", "password", "jacktrig@gmail.com", studentPhone); 
       
     }
 }

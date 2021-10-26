@@ -11,8 +11,12 @@ public abstract class DataConstants {
   protected static final String USER_EMAIL = "email";
   protected static final String USER_PASSWORD = "password";
   protected static final String USER_PHONE_NUMBER = "phoneNumber";
-
+  protected static final String STUDENT_EDUCATION = "education";
+  protected static final String STUDENT_SCHOOL_NAME = "schoolName";
+  protected static final String STUDENT_DEGREE = "degree";
   protected static final String STUDENT_MAJOR = "major";
+  protected static final String STUDENT_GPA = "gpa";
+
 
   protected static final String EMPLOYEE_COMPANY_NAME = "companyName";
   protected static final String EMPLOYEE_JOB_TITLE = "jobTitle";
