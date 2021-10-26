@@ -25,25 +25,20 @@
       {
         "companyName": "Intel",
         "location": "Santa Barbara, California ",
-        "description": "Intel chips are slow"
+        "positionTitle": "software engineer",
+        "description": "Google is cool",
+        "dates": "10/20/19 - 10/30/20"
       },
       {
         "companyName": "Starbucks",
         "location": "Santa Barbara, California",
-        "description": "I like starbucks"
+        "positionTitle": "software engineer",
+        "description": "Google is cool",
+        "dates": "10/20/19 - 10/30/20"
       }
     ],
     "skills": ["Customer Service Oriented", "Leader"],
-    "currentClasses": [
-      {
-        "className": "Business Management 300",
-        "classDescription": "Managing business employees"
-      },
-      {
-        "className": "Finance 101",
-        "classDescription": "make good financial decisions"
-      }
-    ]
+    "currentClasses": ["Business Management 300", "Finance 101"]
   },
   {
     "userID": "4ec4a282-6da3-44d9-a637-45251fe1e9cb",
@@ -76,15 +71,6 @@
       }
     ],
     "skills": ["Problem Solving", "Communication"],
-    "currentClasses": [
-      {
-        "className": "Data Structure and Algorithm",
-        "classDescription": "we learn about data structures"
-      },
-      {
-        "className": "Software Engineering",
-        "classDescription": "new design patterns"
-      }
-    ]
+    "currentClasses": ["Data Structure and Algorithm", "Software Engineering"]
   }
 ]

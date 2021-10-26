@@ -83,20 +83,45 @@ public class DataLoader extends DataConstants {
 	String lastName = (String)studentJSON.get(USER_LAST_NAME);
 	String email = (String)studentJSON.get(USER_EMAIL);
 	String phoneNumber = (String)studentJSON.get(USER_PHONE_NUMBER);
+
+	students.add(new Student(id, firstName, lastName, userName, password, email, phoneNumber));
+	Resume studentResume = new Resume();
         //parsing education object
-	JSONArray educationArray = (JSONArray)studentJSON.get(STUDENT_EDUCATION);
-	for(int j=0; i < educationArray.size(); j++) {
-	  JSONObject studentEducation = (JSONObject)educationArray.get(i);
+	JSONArray educationsArray = (JSONArray)studentJSON.get(STUDENT_EDUCATION);
+	for(int j=0; j < educationsArray.size(); j++) {
+	  JSONObject studentEducation = (JSONObject)educationsArray.get(i);
 	  String schoolName = (String)studentEducation.get(STUDENT_SCHOOL_NAME);
 	  String degree = (String)studentEducation.get(STUDENT_DEGREE);
 	  String major = (String)studentEducation.get(STUDENT_MAJOR);
 	  double gpa = (double)studentEducation.get(STUDENT_GPA);
 	  Education educationObject = new Education(schoolName, degree, major, gpa);
+	  studentResume.addEducation(educationObject);
 	}
-
-
-	students.add(new Student(id, firstName, lastName, userName, password, email, phoneNumber));
+	JSONArray experiencesArray = (JSONArray)studentJSON.get(STUDENT_EXPERIENCE);
+        for(int j=0; j < experiencesArray.size(); j++) {
+	  JSONObject studentExperience = (JSONObject)experiencesArray.get(i);
+	  String companyName = (String)studentExperience.get(EXPERIENCE_COMPANY_NAME);
+	  String location = (String)studentExperience.get(EXPERIENCE_LOCATION);
+	  String positionTitle = (String)studentExperience.get(EXPERIENCE_POSITION_TITLE);
+	  String description = (String)studentExperience.get(EXPERIENCE_DESCRIPTION);
+	  String dates = (String)studentExperience.get(EXPERIENCE_DATES);
+	  ResumeExperience experienceObject = new ResumeExperience(companyName, location, positionTitle, description, dates);
+	  studentResume.addExperience(experienceObject);
 	}
+	JSONArray skillsArray = (JSONArray)studentJSON.get(STUDENT_SKILLS);
+        for(int j=0; j < skillsArray.size(); j++) {
+	  String skill = (String)skillsArray.get(j);
+	  studentResume.addSkill(skill);
+	}
+	JSONArray classesArray = (JSONArray)studentJSON.get(STUDENT_CLASSES);
+        for(int j=0; j < classesArray.size(); j++) {
+	  String className = (String)classesArray.get(j);
+	  studentResume.addClass(className);
+	}
+	
+	
+	students.get(i).addResume(studentResume);
+      }
 	
 	return students;
 	 
@@ -114,7 +139,7 @@ public class DataLoader extends DataConstants {
 
       StudentList studentList = StudentList.getInstance();
       UUID studentID = UUID.randomUUID();
-      studentList.addStudent( "jackson", "trigiani", "jacktrig", "password", "jacktrig@gmail.com", studentPhone); 
+      studentList.addStudent(id, "jackson", "trigiani", "jacktrig", "password", "jacktrig@gmail.com", studentPhone); 
       
     }
 }
